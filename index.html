@@ -14,6 +14,44 @@
     </head>
 
     <body>
+        <div id="mySidenav" class="sidenav">
+            <div class="user">
+                <i class="fa fa-user" style="font-size:40px"></i>
+                <div class="info">
+                    <strong>Bem vindo!</strong>
+                    <span>Entre ou cadastre-se</span>
+                </div>
+                <i class="fa fa-times-circle " style="font-size:20px" class="closebtn" onclick="closeNav()"></i>
+            </div>
+
+            <div class="categories">
+                <div class="title">
+                    <strong>Categorias</strong>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+
+                <span>Orgânicos</span>
+                <span>Congelados</span>
+                <span>Padaria</span>
+                <span>Arroz</span>
+                <span>Feijão</span>
+                <span>Bebidas</span>
+                <span>Doces e Sobremesas</span>
+            </div>
+
+            <div class="categories">
+                <div class="title">
+                    <strong>Saiba mais</strong>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+
+                <span>Nossas lojas</span>
+                <span>Fale conosco</span>
+            </div>
+            
+        </div>
+
+          
         <nav>
             <div class="content">
                 <div class="user">
@@ -47,7 +85,7 @@
 
             <header class="mobile-header">
                 <div>
-                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
                     <img src="assets/img/logo.png" alt="Instabuy logo">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </div>

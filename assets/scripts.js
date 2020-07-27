@@ -9,3 +9,11 @@ $(".item").each(function() {
     });
     $(this).find('img').hide();
 });
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
