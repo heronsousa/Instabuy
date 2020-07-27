@@ -9,7 +9,7 @@
 button,
 input {
   border: 0;
-  font-family: Open Sans;
+  font-family: 'Cairo', sans-serif;
 }
 
 html {
@@ -18,16 +18,14 @@ html {
 
   width: 100%;
   height: 100%;
-
-  background-color: var(--white);
 }
 
 :root {
   --orange: #f47a20;
   --white: #fff;
   --black: #000;
-  --secondary-background: #c0c0c0;
-  --border: #f9f9f9;
+  --secondary-background: #e7e7e7;
+  --border: #eeeeee;
   --primary-text: #050505;
   --secondary-text: #65676b;
 }
@@ -81,7 +79,7 @@ main {
   flex-direction: column;
 
   width: min(900px, 100%);
-  margin-top: 15px;
+  padding-top: 15px;
 }
 
 header.desktop-header {
@@ -196,15 +194,18 @@ header.mobile-header :first-child {
 
   padding: 0 20px 10px;
 
+  background: var(--white);
   border: 1px solid var(--secondary-background);
   border-top: 0;
+  border-radius: 3px;
   box-shadow: 0 0 0 1px var(--secondary-background);
 }
 
 .container aside .categories span {
-  margin-top: 15px;
+    font-weight: 300;
+    margin-top: 15px;
 
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .container aside .title strong,
@@ -227,9 +228,24 @@ section {
   height: 240px;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
+.section-title {
+    text-align: center;
+}
+
+.section-title h2 {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    height: 4px;
+    width: 80px;
+    background: var(--orange);
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 25px;
 }
 
 .product-list {
@@ -241,19 +257,24 @@ h1 {
   padding: 10px 20px;
 }
 
-.product-list > .product {
-  flex: 1 1 150px;
+.product-list > .product-item {
+  flex: 1 1 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  margin: 10px;
+  margin: 5px;
+  padding: 10px;
+
+  background: var(--border);
+
+  border-radius: 5px;
 
   cursor: pointer;
 }
 
-.product-list > .product > img {
+.product-list > .product-item > img {
     width: 150px;
 }
 
