@@ -2,7 +2,8 @@ $(".item").each(function() {
     var img_url = $(this).find('img').attr('src');
     $(this).css({
         'width': '100%',
-        'background-size': 'contain',
+        'height': '300px',
+        'background-size': '100%',
         'background-image': 'url(' + img_url + ')',
         'background-repeat': 'no-repeat',
         'background-position': 'center'
