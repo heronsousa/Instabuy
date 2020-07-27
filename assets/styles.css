@@ -36,52 +36,50 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     min-width: 245px;
 }
 
-/* Header */
-
 header {
     display: flex;
-    justify-content: center;
-    
-    width: 100%;
-    
-    padding: 5px 0;
-    margin-bottom: 10px;
-    
-    background-color: var(--secondary-background);
-}
 
-header span {
-    font-size: 11px;
+    width: 100%;
+
+    background-color: var(--secondary-background);
 }
 
 header .options {
     display: flex;
     justify-content: flex-end;
 
+    margin: 0 auto;
     padding: 0 20px;
 
-    width: 900px;
+    width: min(900px, 100%);
+}
+
+header .options span {
+    font-size: 11px;
 }
 
 header .options :nth-child(2) {
     margin: 0 10px;
 }
 
-/* Nav */
+main {
+    display: flex;
+    flex-direction: column;
+
+    width: min(900px, 100%);
+}
 
 nav.desktop-nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    align-self: center;
 
-    width: min(900px, 100%);
-
+    margin: 0 auto;
     padding: 10px 20px;
 }
 
@@ -95,7 +93,6 @@ nav i {
 
 nav .search {
     display: flex;
-    flex-direction: row;
     
     height: 30px;
 }
@@ -115,7 +112,6 @@ nav .search input[type=text] {
 
 nav .search input:hover,
 nav .search input[type=text]:focus:not([readonly]) {
-    margin: 1px;
     margin-right: 0;
 
     border: 1px solid var(--orange);
@@ -124,12 +120,14 @@ nav .search input[type=text]:focus:not([readonly]) {
 }
 
 nav .search .search-button {
-    padding: 2px 7px;
+    padding: 3px 7px;
+    
+    border: 1px solid var(--orange);
 
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     
-    background-color: var(--orange);
+    background: var(--orange);
     
     cursor: pointer;
 }
@@ -154,28 +152,24 @@ nav.mobile-nav {
 
 nav.mobile-nav :first-child {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Main */
-
-main {
+.container {
     display: flex;
-    align-self: center;
-    
-    width: min(900px, 100%);
+    align-items: flex-start;
+
+    margin-top: 20px;
+
+    padding: 0 50px;
 }
 
-main section {    
-    margin: 15px 20px;
-    max-height: 100vh;
-
-    overflow-y: auto;
+.container aside {
+    margin-right: 10px;
 }
 
-main section .title {
+.container aside .title {
     display: flex;
     align-items: center;
 
@@ -183,7 +177,7 @@ main section .title {
     padding: 10px 15px 10px 20px;
 }
 
-main section .categories {
+.container aside .categories {
     display: flex;
     flex-direction: column;
 
@@ -194,23 +188,27 @@ main section .categories {
     box-shadow: 0 0 0 1px var(--secondary-background);
 }
 
-main section .categories span {
+.container aside .categories span {
     margin-top: 15px;
 
     cursor: pointer;
 }
 
-main section .title strong,
-main section .title i {
+.container aside .title strong,
+.container aside .title i {
     font-size: 17px;
     color: var(--white);
 }
 
-main section .title :nth-child(2) {
+.container aside .title :nth-child(2) {
     margin-right: 35px;
     margin-left: 10px;
 }
 
+.carousel-inner > .carousel-item > img {
+    margin: 0 auto;
+    max-width: 100%; 
+}
 
 @media(max-width: 630px) {
     header .options {
@@ -237,7 +235,7 @@ main section .title :nth-child(2) {
         padding: 5px 7px;
     }
 
-    main section {
+    .container aside {
         display: none;
     }
 }
